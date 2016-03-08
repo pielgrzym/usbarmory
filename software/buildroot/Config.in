@@ -1,2 +1,2 @@
 source "$BR2_EXTERNAL/package/interlock/Config.in"
-source "package/electrum/Config.in"
+source "$BR2_EXTERNAL/package/electrum/Config.in"
