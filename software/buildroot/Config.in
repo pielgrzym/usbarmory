@@ -1,2 +1,4 @@
 source "$BR2_EXTERNAL/package/interlock/Config.in"
 source "$BR2_EXTERNAL/package/electrum/Config.in"
+source "$BR2_EXTERNAL/package/python-slowaes/Config.in"
+source "$BR2_EXTERNAL/package/dnspython/Config.in"

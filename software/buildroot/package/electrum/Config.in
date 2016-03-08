@@ -1,5 +1,12 @@
 config BR2_PACKAGE_ELECTRUM
         bool "electrum"
+        select BR2_PACKAGE_PYTHON 
+        select BR2_PACKAGE_PYTHON_SETUPTOOLS
+        select BR2_PACKAGE_PYTHON_SLOWAES
+        select BR2_PACKAGE_PYTHON_ECDSA
+        select BR2_PACKAGE_PYTHON_REQUESTS
+        select BR2_PACKAGE_PYTHON_PROTOBUF
+        select BR2_PACKAGE_DNSPYTHON
         help
           A thin bitcoin client
 

@@ -1,0 +1,13 @@
+config BR2_PACKAGE_PYTHON_SLOWAES
+    bool "python-slowaes"
+    help
+      Implementations of AES in pure scripting languages (currently !Javascript,
+      Python, Ruby, and PHP, but, in addition to further contributions in those
+      languages, submissions in other scripting languages are also entirely
+      welcome!).
+
+      Such implementations will be slow (hence the project name) but still
+      useful when faster ones are not available (for example, for JavaScript
+      clients in browsers, and Python servers on Google App Engine).
+
+      https://code.google.com/p/slowaes/

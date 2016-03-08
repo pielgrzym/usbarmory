@@ -1,0 +1,5 @@
+config BR2_PACKAGE_DNSPYTHON
+        bool "dnspython"
+        help
+          dnspython is a DNS toolkit for Python
+          http://www.dnspython.org/
