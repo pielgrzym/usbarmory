@@ -7,6 +7,7 @@ config BR2_PACKAGE_ELECTRUM
         select BR2_PACKAGE_PYTHON_REQUESTS
         select BR2_PACKAGE_PYTHON_PROTOBUF
         select BR2_PACKAGE_DNSPYTHON
+        select BR2_PACKAGE_PYTHON_PBKDF2
         help
           A thin bitcoin client
 

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_PBKDF2
+        bool "python-pbkdf2"
+        help
+          This module implements the password-based key derivation function, PBKDF2
+          http://www.dlitz.net/software/python-pbkdf2/
