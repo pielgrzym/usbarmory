@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_QRCODE
+        bool "python-qrcode"
+        select BR2_PACKAGE_PYTHON_PILLOW
+        help
+          qrcode generation for python

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PYTHON_PILLOW
+        bool "python-pillow"
+        help
+          Graphic processing library for python
