@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_JSONRPCLIB
+        bool "python-jsonrpclib"
+        help
+          json rpc library for python
+
