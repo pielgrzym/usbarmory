@@ -1,13 +1,27 @@
 #!/bin/sh
+PIDFILE=/tmp/tor.pid
 
-if [ "$1" != "start" ]; then
-  exit 0
-fi
+case "$1" in
+  start)
+    echo "Starting network..."
+    # tor need to bind to localhost
+    ifconfig lo up
 
-echo "Starting TOR"
+    echo "Starting TOR"
+    # run da tor
+    /usr/bin/tor --runasdaemon 1 --pidfile $PIDFILE
+    ;;
+  stop)
+    echo -n "Stopping network..."
+    kill $(cat $PIDFILE)
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart}"
+    exit 1
+esac
 
-# tor need to bind to localhost
-ifconfig lo up
-
-# run da tor
-/usr/bin/tor --runasdaemon 1
+exit $?
