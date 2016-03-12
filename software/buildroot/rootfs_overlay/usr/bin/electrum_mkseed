@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+from electrum import SimpleConfig, Network, Wallet, WalletStorage
+import sys
+
+storage = WalletStorage(sys.argv[1])
+wallet = Wallet(storage)
+print wallet.make_seed()

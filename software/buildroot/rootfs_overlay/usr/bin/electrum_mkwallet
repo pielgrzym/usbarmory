@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+from electrum import SimpleConfig, Network, Wallet, WalletStorage
+import sys
+
+storage = WalletStorage(sys.argv[1])
+wallet = Wallet(storage)
+seed = sys.argv[2]
+password = sys.argv[3]
+wallet.add_seed(seed, password)
+wallet.create_master_keys(password)
+wallet.create_main_account()
+wallet.synchronize()
+wallet.storage.write()
