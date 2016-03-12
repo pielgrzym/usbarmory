@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ "$1" != "start" ]; then
+  exit 0
+fi
+
+echo "Starting TOR"
+
+# tor need to bind to localhost
+ifconfig lo up
+
+# run da tor
+/usr/bin/tor --runasdaemon 1
