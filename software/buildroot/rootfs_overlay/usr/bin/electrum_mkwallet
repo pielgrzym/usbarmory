@@ -4,8 +4,8 @@ import sys
 
 storage = WalletStorage(sys.argv[1])
 wallet = Wallet(storage)
-seed = sys.argv[2]
-password = sys.argv[3]
+password = sys.argv[2]
+seed = sys.stdin.readline()
 wallet.add_seed(seed, password)
 wallet.create_master_keys(password)
 wallet.create_main_account()
