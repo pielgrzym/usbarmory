@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "Starting Electrum Daemon"
+    # run da tor
+    su - interlock -c 'proxychains4 electrum daemon start > /tmp/electrum.log'
+    ;;
+  stop)
+    echo -n "Stopping Electrum Daemon..."
+    su - interlock -c 'electrum daemon stop'
+    ;;
+  status)
+    su - interlock -c 'electrum daemon status'
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart|status}"
+    exit 1
+esac
+
+exit $?
