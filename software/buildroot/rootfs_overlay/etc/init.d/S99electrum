@@ -4,7 +4,7 @@ case "$1" in
   start)
     echo "Starting Electrum Daemon"
     # run da tor
-    su - interlock -c 'proxychains4 electrum daemon start > /tmp/electrum.log'
+    su - interlock -c 'proxychains4 -q electrum daemon start 2>&1 > /tmp/electrum.log'
     ;;
   stop)
     echo -n "Stopping Electrum Daemon..."
