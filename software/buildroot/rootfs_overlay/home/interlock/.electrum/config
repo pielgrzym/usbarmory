@@ -1,4 +1,5 @@
 {
     'oneserver': 1,
-    'server': 'tv5ajsstuovkutzn.onion:50002:s'
+    'server': 'tv5ajsstuovkutzn.onion:50002:s',
+    'default_wallet_path': '/home/interlock/.interlock-mnt/electrum_wallet'
 }
