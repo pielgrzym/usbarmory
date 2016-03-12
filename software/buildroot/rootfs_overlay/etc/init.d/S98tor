@@ -3,7 +3,7 @@ PIDFILE=/tmp/tor.pid
 
 case "$1" in
   start)
-    echo "Starting network..."
+    echo "Starting lo interface"
     # tor need to bind to localhost
     ifconfig lo up
 
@@ -12,7 +12,7 @@ case "$1" in
     /usr/bin/tor --runasdaemon 1 --pidfile $PIDFILE
     ;;
   stop)
-    echo -n "Stopping network..."
+    echo -n "Stopping tor..."
     kill $(cat $PIDFILE)
     ;;
   restart|reload)
