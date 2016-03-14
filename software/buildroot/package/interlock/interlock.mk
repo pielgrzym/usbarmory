@@ -5,7 +5,7 @@
 ################################################################################
 
 INTERLOCK_VERSION_DUMMY = 5422589e2ced3686b362dda148c83a063510fe5c
-INTERLOCK_VERSION = fb568923a549cdd7b975864541854061bea662fd
+INTERLOCK_VERSION = 9e0ff97346424a65cac9bb46bdd87d1fed103483
 INTERLOCK_SITE = $(call github,inversepath,interlock,$(INTERLOCK_VERSION_DUMMY))
 INTERLOCK_REPO = file:///home/pielgrzym/work/interlock/git
 #INTERLOCK_REPO = https://github.com/inversepath/interlock
