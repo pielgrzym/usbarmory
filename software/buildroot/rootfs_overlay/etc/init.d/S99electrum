@@ -9,6 +9,9 @@ case "$1" in
   stop)
     echo -n "Stopping Electrum Daemon..."
     su - interlock -c 'electrum daemon stop'
+    # echo -n "Cleanup after Electrum Daemon stop..."
+    # blockchain_headers=/home/interlock/.electrum/blockchain_headers
+    # [[ -e $blockchain_headers  ]] && [[ ! -s $blockchain_headers  ]] && rm $blockchain_headers
     ;;
   status)
     su - interlock -c 'electrum daemon status'
