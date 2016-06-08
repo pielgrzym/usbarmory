@@ -4,11 +4,9 @@
 #
 ################################################################################
 
-INTERLOCK_VERSION_DUMMY = 5422589e2ced3686b362dda148c83a063510fe5c
-INTERLOCK_VERSION = 9e0ff97346424a65cac9bb46bdd87d1fed103483
-INTERLOCK_SITE = $(call github,inversepath,interlock,$(INTERLOCK_VERSION_DUMMY))
-INTERLOCK_REPO = file:///home/pielgrzym/work/interlock/git
-#INTERLOCK_REPO = https://github.com/inversepath/interlock
+INTERLOCK_VERSION = 22aff10fe8910359e6dfdc8925470d3a361cb942
+INTERLOCK_SITE = $(call github,inversepath,interlock,$(INTERLOCK_VERSION))
+INTERLOCK_REPO = https://github.com/pielgrzym/interlock
 
 INTERLOCK_LICENSE = GPLv3
 INTERLOCK_LICENSE_FILES = LICENSE

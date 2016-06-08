@@ -13,7 +13,7 @@ echo "Starting INTERLOCK"
 /bin/date -s 201510131000
 
 if [ ! -b /dev/mmcblk0p2 ]; then
-  /usr/sbin/parted /dev/mmcblk0 --script mkpart primary ext4 21M 100%
+  /usr/sbin/parted /dev/mmcblk0 --script mkpart primary ext4 41M 100%
   /usr/sbin/parted /dev/mmcblk0 --script set 2 lvm on
 fi
 
